@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  mysql_db:
+    image: mysql:5.7
+    container_name: synapsis_mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: coal_mining
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      # Penting: Docker akan mengeksekusi file .sql dalam urutan alfabetis.
+      # Jika urutan produksi_logs.sql, create_equipment_table.sql, create_weather_table.sql
+      # adalah urutan yang wajib, pastikan nama filenya juga alfabetis atau tambahkan awalan angka.
+      # Contoh: 01_production_logs.sql, 02_create_equipment_table.sql, 03_create_weather_table.sql
+      - ./init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10 # Tingkatkan retries untuk memberi waktu lebih jika database besar
+
+  etl_app:
+    build: ./etl
+    container_name: synapsis_etl
+    depends_on:
+      mysql_db:
+        condition: service_healthy # ETL akan menunggu MySQL sehat dan inisialisasi selesai
+    environment:
+      DB_HOST: mysql_db
+      DB_USER: synapsis
+      DB_PASSWORD: mypass123
+      DB_NAME: coal_mining
+    # Gunakan 'entrypoint' atau 'command' untuk menjalankan skrip Python secara berurutan.
+    # Disarankan menggunakan script shell jika ada banyak perintah yang harus diurutkan.
+    entrypoint: ["./run_etl_scripts.sh"] # Kita akan membuat file ini di folder etl
+    volumes:
+      - ./etl:/app # Bind mount agar perubahan kode langsung terlihat
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: synapsis_metabase
+    ports:
+      - "3000:3000"
+    environment:
+      MB_DB_FILE: /metabase_data/metabase.db
+    volumes:
+      - metabase_data:/metabase_data
+    depends_on:
+      mysql_db:
+        condition: service_healthy # Metabase juga menunggu MySQL siap
+
+volumes:
+  mysql_data:
+  metabase_data:

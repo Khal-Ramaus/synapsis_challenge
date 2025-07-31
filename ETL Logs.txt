@@ -1,0 +1,255 @@
+C:\Users\haika\synapsis>docker-compose logs etl_app
+time="2025-07-31T12:32:08+07:00" level=warning msg="C:\\Users\\haika\\synapsis\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+synapsis_etl  | Running equipment_sensors.py...
+synapsis_etl  | WARNING: Using incubator modules: jdk.incubator.vector
+synapsis_etl  | :: loading settings :: url = jar:file:/usr/local/lib/python3.9/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+synapsis_etl  | Ivy Default Cache set to: /root/.ivy2.5.2/cache
+synapsis_etl  | The jars for the packages stored in: /root/.ivy2.5.2/jars
+synapsis_etl  | mysql#mysql-connector-java added as a dependency
+synapsis_etl  | :: resolving dependencies :: org.apache.spark#spark-submit-parent-beaab489-e912-441a-8868-a4b3100dea3c;1.0
+synapsis_etl  |         confs: [default]
+synapsis_etl  | mysql#mysql-connector-java;8.0.33 is relocated to com.mysql#mysql-connector-j;8.0.33. Please update your dependencies.
+synapsis_etl  |         found mysql#mysql-connector-java;8.0.33 in central
+synapsis_etl  |         found com.mysql#mysql-connector-j;8.0.33 in central
+synapsis_etl  |         found com.google.protobuf#protobuf-java;3.21.9 in central
+synapsis_etl  | downloading https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar ...
+synapsis_etl  |         [SUCCESSFUL ] com.mysql#mysql-connector-j;8.0.33!mysql-connector-j.jar (90744ms)
+synapsis_etl  | downloading https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar ...
+synapsis_etl  |         [SUCCESSFUL ] com.google.protobuf#protobuf-java;3.21.9!protobuf-java.jar(bundle) (7013ms)
+synapsis_etl  | :: resolution report :: resolve 11285ms :: artifacts dl 97767ms
+synapsis_etl  |         :: modules in use:
+synapsis_etl  |         com.google.protobuf#protobuf-java;3.21.9 from central in [default]
+synapsis_etl  |         com.mysql#mysql-connector-j;8.0.33 from central in [default]
+synapsis_etl  |         mysql#mysql-connector-java;8.0.33 from central in [default]
+synapsis_etl  |         ---------------------------------------------------------------------
+synapsis_etl  |         |                  |            modules            ||   artifacts   |
+synapsis_etl  |         |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+synapsis_etl  |         ---------------------------------------------------------------------
+synapsis_etl  |         |      default     |   3   |   3   |   3   |   0   ||   2   |   2   |
+synapsis_etl  |         ---------------------------------------------------------------------
+synapsis_etl  | :: retrieving :: org.apache.spark#spark-submit-parent-beaab489-e912-441a-8868-a4b3100dea3c
+synapsis_etl  |         confs: [default]
+synapsis_etl  |         2 artifacts copied, 0 already retrieved (4055kB/26ms)
+synapsis_etl  | 25/07/31 05:30:48 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+synapsis_etl  | Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+synapsis_etl  | Setting default log level to "WARN".
+synapsis_etl  | To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+synapsis_etl  | Running weather_api.py...
+WARNING: Using incubator modules: jdk.incubator.vector
+synapsis_etl  | :: loading settings :: url = jar:file:/usr/local/lib/python3.9/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+synapsis_etl  | Ivy Default Cache set to: /root/.ivy2.5.2/cache
+synapsis_etl  | The jars for the packages stored in: /root/.ivy2.5.2/jars
+synapsis_etl  | mysql#mysql-connector-java added as a dependency
+synapsis_etl  | :: resolving dependencies :: org.apache.spark#spark-submit-parent-0db9b920-9362-44b1-a17b-7065878623fb;1.0
+synapsis_etl  |         confs: [default]
+synapsis_etl  |         found mysql#mysql-connector-java;8.0.33 in central
+synapsis_etl  |         found com.mysql#mysql-connector-j;8.0.33 in central
+synapsis_etl  |         found com.google.protobuf#protobuf-java;3.21.9 in central
+synapsis_etl  | :: resolution report :: resolve 193ms :: artifacts dl 5ms
+synapsis_etl  |         :: modules in use:
+synapsis_etl  |         com.google.protobuf#protobuf-java;3.21.9 from central in [default]
+synapsis_etl  |         com.mysql#mysql-connector-j;8.0.33 from central in [default]
+synapsis_etl  |         mysql#mysql-connector-java;8.0.33 from central in [default]
+synapsis_etl  |         ---------------------------------------------------------------------
+synapsis_etl  |         |                  |            modules            ||   artifacts   |
+synapsis_etl  |         |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+synapsis_etl  |         ---------------------------------------------------------------------
+synapsis_etl  |         |      default     |   3   |   0   |   0   |   0   ||   2   |   0   |
+synapsis_etl  |         ---------------------------------------------------------------------
+synapsis_etl  | :: retrieving :: org.apache.spark#spark-submit-parent-0db9b920-9362-44b1-a17b-7065878623fb
+synapsis_etl  |         confs: [default]
+synapsis_etl  |         0 artifacts copied, 2 already retrieved (0kB/7ms)
+synapsis_etl  | 25/07/31 05:31:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+synapsis_etl  | Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+synapsis_etl  | Setting default log level to "WARN".
+synapsis_etl  | To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+synapsis_etl  | Running calculate_daily_metrics.py...
+WARNING: Using incubator modules: jdk.incubator.vector
+synapsis_etl  | :: loading settings :: url = jar:file:/usr/local/lib/python3.9/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+synapsis_etl  | Ivy Default Cache set to: /root/.ivy2.5.2/cache
+synapsis_etl  | The jars for the packages stored in: /root/.ivy2.5.2/jars
+synapsis_etl  | mysql#mysql-connector-java added as a dependency
+synapsis_etl  | :: resolving dependencies :: org.apache.spark#spark-submit-parent-d5efb170-f54c-4b09-8179-192d73c966c0;1.0
+synapsis_etl  |         confs: [default]
+synapsis_etl  |         found mysql#mysql-connector-java;8.0.33 in central
+synapsis_etl  |         found com.mysql#mysql-connector-j;8.0.33 in central
+synapsis_etl  |         found com.google.protobuf#protobuf-java;3.21.9 in central
+synapsis_etl  | :: resolution report :: resolve 189ms :: artifacts dl 6ms
+synapsis_etl  |         :: modules in use:
+synapsis_etl  |         com.google.protobuf#protobuf-java;3.21.9 from central in [default]
+synapsis_etl  |         com.mysql#mysql-connector-j;8.0.33 from central in [default]
+synapsis_etl  |         mysql#mysql-connector-java;8.0.33 from central in [default]
+synapsis_etl  |         ---------------------------------------------------------------------
+synapsis_etl  |         |                  |            modules            ||   artifacts   |
+synapsis_etl  |         |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+synapsis_etl  |         ---------------------------------------------------------------------
+synapsis_etl  |         |      default     |   3   |   0   |   0   |   0   ||   2   |   0   |
+synapsis_etl  |         ---------------------------------------------------------------------
+synapsis_etl  | :: retrieving :: org.apache.spark#spark-submit-parent-d5efb170-f54c-4b09-8179-192d73c966c0
+synapsis_etl  |         confs: [default]
+synapsis_etl  |         0 artifacts copied, 2 already retrieved (0kB/7ms)
+synapsis_etl  | 25/07/31 05:31:26 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+synapsis_etl  | Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+synapsis_etl  | Setting default log level to "WARN".
+synapsis_etl  | To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+synapsis_etl  | Reading data from production_logs...
+synapsis_etl  | Successfully read production_logs.
+synapsis_etl  | Reading data from equipment_sensors...
+synapsis_etl  | Successfully read equipment_sensors.
+synapsis_etl  | Reading data from weather_data...
+synapsis_etl  | Successfully read weather_data.
+synapsis_etl  | Replace negative tons_extracted with 0
+synapsis_etl  | +----------+----------------------+---------------------+
+synapsis_etl  | |      date|total_tons_mined_daily|average_quality_grade|
+synapsis_etl  | +----------+----------------------+---------------------+
+synapsis_etl  | |2024-09-18|    2225.3900000000003|              4.68333|
+synapsis_etl  | |2025-02-16|               2012.96|              4.23333|
+synapsis_etl  | |2024-08-27|               2000.38|              4.30000|
+synapsis_etl  | |2025-06-29|               1795.91|              4.50000|
+synapsis_etl  | |2024-10-24|               1575.73|              4.13333|
+synapsis_etl  | +----------+----------------------+---------------------+
+synapsis_etl  | only showing top 5 rows
+synapsis_etl  | Calculated daily total production and average quality.
+synapsis_etl  | +-------------------+------------+------+----------------+-----------------+-------------------+-------------------+----------------+
+synapsis_etl  | |          timestamp|equipment_id|status|fuel_consumption|maintenance_alert|     next_timestamp|           end_time|duration_seconds|
+synapsis_etl  | +-------------------+------------+------+----------------+-----------------+-------------------+-------------------+----------------+
+synapsis_etl  | |2024-07-01 01:00:00|       TR002|active|            9.36|            False|2024-07-01 01:00:00|2024-07-01 01:00:00|               0|
+synapsis_etl  | |2024-07-01 01:00:00|       TR002|active|            9.36|            False|2024-07-01 01:00:00|2024-07-01 01:00:00|               0|
+synapsis_etl  | |2024-07-01 01:00:00|       TR002|active|            9.36|            False|2024-07-01 01:00:00|2024-07-01 01:00:00|               0|
+synapsis_etl  | |2024-07-01 01:00:00|       TR002|active|            9.36|            False|2024-07-01 02:00:00|2024-07-01 02:00:00|            3600|
+synapsis_etl  | |2024-07-01 04:00:00|       TR002|active|            8.52|            False|2024-07-01 04:00:00|2024-07-01 04:00:00|               0|
+synapsis_etl  | +-------------------+------------+------+----------------+-----------------+-------------------+-------------------+----------------+
+synapsis_etl  | only showing top 5 rows
+synapsis_etl  | +-------------------+------------+----------------------------+
+synapsis_etl  | |               date|equipment_id|total_active_seconds_per_day|
+synapsis_etl  | +-------------------+------------+----------------------------+
+synapsis_etl  | |2024-07-01 00:00:00|       TR001|                       21600|
+synapsis_etl  | |2024-07-02 00:00:00|       TR001|                       39600|
+synapsis_etl  | |2024-07-03 00:00:00|       TR001|                       36000|
+synapsis_etl  | |2024-07-04 00:00:00|       TR001|                       25200|
+synapsis_etl  | |2024-07-05 00:00:00|       TR001|                       32400|
+synapsis_etl  | +-------------------+------------+----------------------------+
+synapsis_etl  | only showing top 5 rows
+synapsis_etl  | +-------------------+-------------------------+
+synapsis_etl  | |               date|equipment_utilization_pct|
+synapsis_etl  | +-------------------+-------------------------+
+synapsis_etl  | |2024-07-31 00:00:00|                     32.5|
+synapsis_etl  | |2024-09-22 00:00:00|        36.66666666666667|
+synapsis_etl  | |2024-09-27 00:00:00|                     40.0|
+synapsis_etl  | |2024-10-13 00:00:00|       31.666666666666664|
+synapsis_etl  | |2025-02-26 00:00:00|        37.49999999999999|
+synapsis_etl  | +-------------------+-------------------------+
+synapsis_etl  | only showing top 5 rows
+synapsis_etl  | +-------------------+-------------------------+
+synapsis_etl  | |               date|equipment_utilization_pct|
+synapsis_etl  | +-------------------+-------------------------+
+synapsis_etl  | |2024-07-31 00:00:00|                     32.5|
+synapsis_etl  | |2024-09-22 00:00:00|        36.66666666666667|
+synapsis_etl  | |2024-09-27 00:00:00|                     40.0|
+synapsis_etl  | |2024-10-13 00:00:00|       31.666666666666664|
+synapsis_etl  | |2025-02-26 00:00:00|        37.49999999999999|
+synapsis_etl  | |2025-01-11 00:00:00|       31.666666666666664|
+synapsis_etl  | |2024-08-28 00:00:00|        35.83333333333333|
+synapsis_etl  | |2024-09-02 00:00:00|       30.833333333333336|
+synapsis_etl  | |2025-04-15 00:00:00|                     37.5|
+synapsis_etl  | |2025-06-13 00:00:00|       28.333333333333332|
+synapsis_etl  | |2025-01-20 00:00:00|       39.166666666666664|
+synapsis_etl  | |2024-11-17 00:00:00|       28.333333333333336|
+synapsis_etl  | |2024-11-24 00:00:00|                     30.0|
+synapsis_etl  | |2025-03-10 00:00:00|       33.333333333333336|
+synapsis_etl  | |2025-06-22 00:00:00|       28.333333333333336|
+synapsis_etl  | |2024-12-23 00:00:00|                     35.0|
+synapsis_etl  | |2024-11-16 00:00:00|                     37.5|
+synapsis_etl  | |2024-07-27 00:00:00|       29.166666666666668|
+synapsis_etl  | |2024-12-29 00:00:00|       24.166666666666664|
+synapsis_etl  | |2024-08-12 00:00:00|                     30.0|
+synapsis_etl  | +-------------------+-------------------------+
+synapsis_etl  | only showing top 20 rows
+synapsis_etl  | Calculated daily equipment utilization and verified bounds (0-100%).
+synapsis_etl  | +-------------------+-------------------------+
+synapsis_etl  | |               date|total_fuel_consumed_daily|
+synapsis_etl  | +-------------------+-------------------------+
+synapsis_etl  | |2024-07-31 00:00:00|        693.1600036621094|
+synapsis_etl  | |2024-09-22 00:00:00|        846.5199983119965|
+synapsis_etl  | |2024-09-27 00:00:00|        882.3999985456467|
+synapsis_etl  | |2024-10-13 00:00:00|        667.9599964022636|
+synapsis_etl  | |2025-02-26 00:00:00|        970.0399994850159|
+synapsis_etl  | |2025-01-11 00:00:00|         692.480003118515|
+synapsis_etl  | |2024-08-28 00:00:00|        950.3199980258942|
+synapsis_etl  | |2024-09-02 00:00:00|        833.3199948072433|
+synapsis_etl  | |2025-04-15 00:00:00|        950.4800010919571|
+synapsis_etl  | |2025-06-13 00:00:00|        727.4399979114532|
+synapsis_etl  | |2025-01-20 00:00:00|        914.9199980795383|
+synapsis_etl  | |2024-11-17 00:00:00|        756.2800016403198|
+synapsis_etl  | |2024-11-24 00:00:00|        816.9999984502792|
+synapsis_etl  | |2025-03-10 00:00:00|        782.7599947750568|
+synapsis_etl  | |2025-06-22 00:00:00|        716.8800017684698|
+synapsis_etl  | |2024-12-23 00:00:00|        776.9199986159801|
+synapsis_etl  | |2024-11-16 00:00:00|        938.7600078508258|
+synapsis_etl  | |2024-07-27 00:00:00|        692.2000051736832|
+synapsis_etl  | |2024-12-29 00:00:00|       501.47999557852745|
+synapsis_etl  | |2024-08-12 00:00:00|        713.4800009131432|
+synapsis_etl  | +-------------------+-------------------------+
+synapsis_etl  | only showing top 20 rows
+synapsis_etl  | +-------------------+-------------------------+----------------------+---------------------+-------------------+
+synapsis_etl  | |               date|total_fuel_consumed_daily|total_tons_mined_daily|average_quality_grade|    fuel_efficiency|
+synapsis_etl  | +-------------------+-------------------------+----------------------+---------------------+-------------------+
+synapsis_etl  | |2024-07-31 00:00:00|        693.1600036621094|               1382.55|              4.21667| 0.5013634253098328|
+synapsis_etl  | |2024-09-22 00:00:00|        846.5199983119965|    1346.7600000000002|              4.53333| 0.6285603955508007|
+synapsis_etl  | |2024-09-27 00:00:00|        882.3999985456467|                1420.0|              4.51667| 0.6214084496800328|
+synapsis_etl  | |2024-10-13 00:00:00|        667.9599964022636|                1599.7|              4.48333|0.41755328899310096|
+synapsis_etl  | |2025-02-26 00:00:00|        970.0399994850159|                1945.5|              5.41667|0.49860704162683933|
+synapsis_etl  | |2025-01-11 00:00:00|         692.480003118515|    1801.8600000000001|              4.30000|0.38431398838895087|
+synapsis_etl  | |2024-08-28 00:00:00|        950.3199980258942|               1506.78|              4.48333| 0.6306959197931312|
+synapsis_etl  | |2024-09-02 00:00:00|        833.3199948072433|               1450.23|              4.21667|  0.574612299295452|
+synapsis_etl  | |2025-04-15 00:00:00|        950.4800010919571|               1734.66|              4.00000| 0.5479344661731734|
+synapsis_etl  | |2025-06-13 00:00:00|        727.4399979114532|    2028.2499999999998|              4.35000|0.35865401104965033|
+synapsis_etl  | |2025-01-20 00:00:00|        914.9199980795383|    1709.2600000000002|              4.75000| 0.5352725729728293|
+synapsis_etl  | |2024-11-17 00:00:00|        756.2800016403198|    2037.5000000000002|              3.90000| 0.3711803689032244|
+synapsis_etl  | |2024-11-24 00:00:00|        816.9999984502792|               1760.23|              4.31667|0.46414388940665663|
+synapsis_etl  | |2025-03-10 00:00:00|        782.7599947750568|               2287.08|              4.51667|0.34225300154566385|
+synapsis_etl  | |2025-06-22 00:00:00|        716.8800017684698|               1894.03|              4.23333| 0.3784945337552572|
+synapsis_etl  | |2024-12-23 00:00:00|        776.9199986159801|    1694.2800000000002|              4.75000|0.45855466547204715|
+synapsis_etl  | |2024-11-16 00:00:00|        938.7600078508258|    1431.0499999999997|              4.86667|  0.655993856155149|
+synapsis_etl  | |2024-07-27 00:00:00|        692.2000051736832|               1888.72|              4.78333|0.36649159492867295|
+synapsis_etl  | |2024-12-29 00:00:00|       501.47999557852745|               1521.86|              4.31667| 0.3295178239644432|
+synapsis_etl  | |2024-08-12 00:00:00|        713.4800009131432|    1252.0800000000002|              4.73333| 0.5698357939693495|
+synapsis_etl  | +-------------------+-------------------------+----------------------+---------------------+-------------------+
+synapsis_etl  | only showing top 20 rows
+synapsis_etl  | Calculated daily fuel efficiency.
+synapsis_etl  | +----+-----------------+------------------+------------+
+synapsis_etl  | |date|daily_rainfall_mm|average_temp_daily|is_rainy_day|
+synapsis_etl  | +----+-----------------+------------------+------------+
+synapsis_etl  | +----+-----------------+------------------+------------+
+synapsis_etl  |
+synapsis_etl  | Calculated daily weather metrics.
+synapsis_etl  | Combined all daily metrics. Missing weather data for production days are implicitly handled by filling with 0/False.
+synapsis_etl  | Final combined daily metrics DataFrame
+synapsis_etl  | +-------------------+----------------------+---------------------+-------------------------+-------------------------+---------------+-----------------+------------------+------------+
+synapsis_etl  | |date               |total_tons_mined_daily|average_quality_grade|equipment_utilization_pct|total_fuel_consumed_daily|fuel_efficiency|daily_rainfall_mm|average_temp_daily|is_rainy_day|
+synapsis_etl  | +-------------------+----------------------+---------------------+-------------------------+-------------------------+---------------+-----------------+------------------+------------+
+synapsis_etl  | |2024-07-01 00:00:00|1483.01               |4.65                 |35.83                    |956.4800052046776        |0.64           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-02 00:00:00|1867.3200000000002    |3.77                 |37.5                     |857.2800052911043        |0.46           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-03 00:00:00|1366.6                |4.93                 |31.67                    |888.9199980348349        |0.65           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-04 00:00:00|2175.39               |4.55                 |31.67                    |823.5199928283691        |0.38           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-05 00:00:00|1763.0100000000002    |5.37                 |35.83                    |807.3600063323975        |0.46           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-06 00:00:00|1079.6699999999998    |4.63                 |40.0                     |1096.6800065338612       |1.02           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-07 00:00:00|1562.15               |4.35                 |33.33                    |771.160001039505         |0.49           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-08 00:00:00|1481.75               |4.68                 |34.17                    |828.1199971437454        |0.56           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-09 00:00:00|1485.3200000000002    |4.75                 |28.33                    |672.3200014382601        |0.45           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-10 00:00:00|1595.8600000000001    |4.32                 |30.83                    |755.4399998188019        |0.47           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-11 00:00:00|1701.55               |4.40                 |27.5                     |644.0399980545044        |0.38           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-12 00:00:00|1737.26               |4.38                 |35.0                     |648.3600029051304        |0.37           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-13 00:00:00|1163.25               |4.27                 |40.0                     |1060.040000319481        |0.91           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-14 00:00:00|1537.86               |4.10                 |25.83                    |645.160006403923         |0.42           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-15 00:00:00|1606.38               |4.73                 |40.83                    |977.480003297329         |0.61           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-16 00:00:00|1642.79               |3.88                 |30.83                    |744.9200055003166        |0.45           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-17 00:00:00|1402.1299999999999    |4.10                 |38.33                    |1026.9199979156256       |0.73           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-18 00:00:00|2213.94               |5.00                 |34.17                    |846.3999998569489        |0.38           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-19 00:00:00|1462.89               |4.30                 |34.17                    |788.3599999696016        |0.54           |0.0              |0.0               |false       |
+synapsis_etl  | |2024-07-20 00:00:00|1923.15               |4.52                 |35.0                     |840.2799992337823        |0.44           |0.0              |0.0               |false       |
+synapsis_etl  | +-------------------+----------------------+---------------------+-------------------------+-------------------------+---------------+-----------------+------------------+------------+
+synapsis_etl  | only showing top 20 rows
+synapsis_etl  | Saving daily metrics to daily_production_metrics table...
+synapsis_etl  | Daily production metrics successfully saved to MySQL.
+synapsis_etl  | All ETL scripts finished.

@@ -1,0 +1,42 @@
+docker compose down -v 
+docker compose up --build
+
+Login ke Mysql
+URL: http://localhost:3306
+Username: synapsis
+Password: mypass123
+
+menjalankan Kembali
+docker compose up
+
+test MySQL, jalankan di cmd:
+1. docker exec -it mysql mysql -uroot -prootpass
+2. show tables
+
+login airflow
+docker exec -it airflow bash
+airflow users create \
+  --username admin \
+  --password admin \
+  --firstname airflow \
+  --lastname admin \
+  --role Admin \
+  --email admin@example.com
+
+cek container
+docker ps
+docker exec -it airflow bash
+
+menjalankan python
+python /opt/airflow/etl/weather_api.py
+
+menjalankan MySQL
+docker exec -it mysql bash
+mysql -u root -p
+# Masukkan password: rootpass
+USE coal_mining;
+SHOW TABLES;
+DESCRIBE equipment_sensors;
+
+
+log etl docker-compose logs etl_app
